@@ -13,4 +13,8 @@ return [
     'items/show' => ['ItemController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
+    'todo/add' => ['TaskController', 'add',],
+    'todo/browse' => ['TaskController', 'browse',],
+    'todo/show' => ['TaskController', 'show', ['id']],
+    'todo/delete' => ['TaskController', 'delete', ['id']],
 ];

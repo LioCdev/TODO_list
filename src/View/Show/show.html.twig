@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>your selected task:</h1>
+    <br>
+    <h2>{{ task.name }}</h2>
+    <br>
+    <h4>task submitted on {{ task.create_date }}</h4>
+
+    <a href="/todo/delete?id={{ task.id }}">
+    <button>delete this task</button>
+    </a>
+{% endblock %}

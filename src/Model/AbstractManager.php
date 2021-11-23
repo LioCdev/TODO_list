@@ -20,7 +20,7 @@ abstract class AbstractManager
 {
     protected PDO $pdo;
 
-    public const TABLE = '';
+    public const TABLE = 'todo';
 
     public function __construct()
     {
@@ -38,7 +38,7 @@ abstract class AbstractManager
             $query .= ' ORDER BY ' . $orderBy . ' ' . $direction;
         }
 
-        return $this->pdo->query($query)->fetchAll();
+        return $this->pdo->query($query)->fetchAll(\PDO::FETCH_ASSOC);
     }
 
     /**
